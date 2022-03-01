@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Lato:ital,wght@0,400;1,300;1,400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+body {
+  font-family: Lato;
+  background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 1%;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'DancingScript', cursive;
+  font-weight: medium;
+  font-size: 4rem;
+  letter-spacing: 1px;
+  color: #33313B;
+  margin-top: 6rem;
+}
+
+#inputForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 3rem 0;
+}
+
+#weather_app_svg {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-49%, -60%);
+          transform: translate(-49%, -60%);
+  margin-top: 5rem;
+}
+/*# sourceMappingURL=style.css.map */
