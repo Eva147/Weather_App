@@ -1,45 +1,22 @@
+// fonts
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Lato:ital,wght@0,400;1,300;1,400&display=swap");
-@import './base';
+// variables & functions
 @import './variables'; 
+//base & layout
+@import './base';
+//containers
+@import './containers';
+// title
+@import './title';
+//form
+@import './form';
 
 body {
     font-family: Lato;
     background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
-    align-items: center;
-}
-
-.wrapper {
-    min-height: 100%;
-    overflow: hidden;
-}
-
-.container {
-    margin: $base-margin;
-    padding: $base-padding;
-    width: $base-width;
-    text-align: center;
 }
 
 
-h1 {
-    font-family: 'DancingScript', cursive;
-    font-weight: medium;
-    font-size: 4rem;
-    letter-spacing: 1px;
-    color: $primary;
-    margin-top: 6rem;
-}
 
-#inputForm {
- display: flex;
- justify-content: center;
- margin: 3rem 0;
-}
 
-#weather_app_svg {
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-49%, -60%);
-    margin-top: 5rem;
-}
+

@@ -1,0 +1,60 @@
+form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: $base-margin;
+    padding: $base-padding;
+    width: 100%;
+    input {
+        padding: 2%;
+        margin: $base-margin;
+        width: 60%;
+        background-color: $white;
+        box-shadow: $base-box-shadow;
+        border-radius: 20px;
+        font-size: $font-size;
+        color: $primary;
+    }
+    input:hover {
+        box-shadow: $base-box-shadow-hover;
+    }
+    label {
+        padding: $base-padding;
+        margin: $base-margin;
+        font-weight: 600;
+        font-size: $font-size;
+        color: $primary;
+        text-align: center;
+    }
+    button {
+        padding: 2%;
+        margin: $base-margin;
+        background-color: $white;
+        box-shadow: $base-box-shadow;
+        border-radius: 20px;
+        font-weight: 700;
+        font-size: $font-size;
+        color: $primary;
+    }
+    button:hover {
+        box-shadow: $base-box-shadow-hover;
+    }
+}
+
+@media screen and (max-width:1450px){
+    form {
+        justify-content: space-between;
+        flex-direction: column;
+        margin: $base-margin-sm;
+        input {
+            width: 100%;
+            margin: $base-margin-sm;
+        }
+        label {
+            margin: $base-margin-sm;
+        }
+        button {
+            margin: $base-margin-sm;
+        }
+    }
+}

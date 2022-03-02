@@ -5,6 +5,17 @@ $blue: #4592AF;
 $white: #F6F5F5;
 
 // base parameters for containers
-$base-margin: 0 auto;
+$base-margin: 3rem auto;
+$base-margin-sm: 1rem auto;
 $base-padding: 1%;
 $base-width: 100%;
+
+// box-shadow
+$base-box-shadow: 0 0 10px 3px $blue;
+$base-box-shadow-hover: 0 0 15px 3px $blue;
+
+// font-sizes
+$font-size: 1rem;
+$font-size-md: 2rem;
+$font-size-lg: 4rem;
+

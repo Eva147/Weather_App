@@ -26,7 +26,6 @@ html, body {
   height: 100%;
   font-size: 100%;
   line-height: 1;
-  font-size: 14px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
 }
@@ -69,24 +68,28 @@ h1, h2, h3, h4, h5, h6 {
   font-family: inherit;
 }
 
-body {
-  font-family: Lato;
-  background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .wrapper {
   min-height: 100%;
   overflow: hidden;
 }
 
 .container {
-  margin: 0 auto;
+  margin: 3rem auto;
   padding: 1%;
   width: 100%;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
 }
 
 h1 {
@@ -95,25 +98,98 @@ h1 {
   font-size: 4rem;
   letter-spacing: 1px;
   color: #33313B;
-  margin-top: 6rem;
+  margin: 3rem auto;
+  text-align: center;
 }
 
-#inputForm {
+@media screen and (max-width: 1450px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 3rem 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3rem auto;
+  padding: 1%;
+  width: 100%;
 }
 
-#weather_app_svg {
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  -webkit-transform: translate(-49%, -60%);
-          transform: translate(-49%, -60%);
-  margin-top: 5rem;
+form input {
+  padding: 2%;
+  margin: 3rem auto;
+  width: 60%;
+  background-color: #F6F5F5;
+  -webkit-box-shadow: 0 0 10px 3px #4592AF;
+          box-shadow: 0 0 10px 3px #4592AF;
+  border-radius: 20px;
+  font-size: 1rem;
+  color: #33313B;
+}
+
+form input:hover {
+  -webkit-box-shadow: 0 0 15px 3px #4592AF;
+          box-shadow: 0 0 15px 3px #4592AF;
+}
+
+form label {
+  padding: 1%;
+  margin: 3rem auto;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #33313B;
+  text-align: center;
+}
+
+form button {
+  padding: 2%;
+  margin: 3rem auto;
+  background-color: #F6F5F5;
+  -webkit-box-shadow: 0 0 10px 3px #4592AF;
+          box-shadow: 0 0 10px 3px #4592AF;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #33313B;
+}
+
+form button:hover {
+  -webkit-box-shadow: 0 0 15px 3px #4592AF;
+          box-shadow: 0 0 15px 3px #4592AF;
+}
+
+@media screen and (max-width: 1450px) {
+  form {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 1rem auto;
+  }
+  form input {
+    width: 100%;
+    margin: 1rem auto;
+  }
+  form label {
+    margin: 1rem auto;
+  }
+  form button {
+    margin: 1rem auto;
+  }
+}
+
+body {
+  font-family: Lato;
+  background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
 }
 /*# sourceMappingURL=style.css.map */
