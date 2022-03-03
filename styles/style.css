@@ -68,15 +68,17 @@ h1, h2, h3, h4, h5, h6 {
   font-family: inherit;
 }
 
+body {
+  font-family: Lato;
+  background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+}
+
 .wrapper {
   min-height: 100%;
   overflow: hidden;
 }
 
 .container {
-  margin: 3rem auto;
-  padding: 1%;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,11 +87,14 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 3rem auto;
+  padding: 1%;
+  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 80%;
+  width: 70%;
 }
 
 h1 {
@@ -119,13 +124,15 @@ form {
           align-items: center;
   margin: 3rem auto;
   padding: 1%;
+  position: relative;
   width: 100%;
 }
 
 form input {
   padding: 2%;
   margin: 3rem auto;
-  width: 60%;
+  width: 80%;
+  height: 80%;
   background-color: #F6F5F5;
   -webkit-box-shadow: 0 0 10px 3px #4592AF;
           box-shadow: 0 0 10px 3px #4592AF;
@@ -139,12 +146,21 @@ form input:hover {
           box-shadow: 0 0 15px 3px #4592AF;
 }
 
+form input:focus + label {
+  opacity: 0;
+}
+
+form input:valid + label {
+  opacity: 0;
+}
+
 form label {
-  padding: 1%;
-  margin: 3rem auto;
+  position: absolute;
+  left: 5%;
   font-weight: 600;
   font-size: 1rem;
-  color: #33313B;
+  color: #4592AF;
+  opacity: 0.5;
   text-align: center;
 }
 
@@ -180,16 +196,8 @@ form button:hover {
     width: 100%;
     margin: 1rem auto;
   }
-  form label {
-    margin: 1rem auto;
-  }
   form button {
     margin: 1rem auto;
   }
-}
-
-body {
-  font-family: Lato;
-  background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
 }
 /*# sourceMappingURL=style.css.map */

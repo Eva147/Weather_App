@@ -4,12 +4,10 @@
 }
 
 .container {
+    @include display_flex(); 
     margin: $base-margin;
     padding: $base-padding;
     width: $base-width;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     flex-direction: column;
-    width: 80%;
+    width: 70%;
 }

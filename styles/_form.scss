@@ -1,29 +1,40 @@
 form {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include display_flex();
     margin: $base-margin;
     padding: $base-padding;
+    position: relative;
     width: 100%;
     input {
         padding: 2%;
         margin: $base-margin;
-        width: 60%;
+        width: 80%;
+        height: 80%;
         background-color: $white;
         box-shadow: $base-box-shadow;
         border-radius: 20px;
         font-size: $font-size;
         color: $primary;
-    }
-    input:hover {
-        box-shadow: $base-box-shadow-hover;
+        &:hover {
+            box-shadow: $base-box-shadow-hover;
+        }
+        &:focus {
+            & + label {
+              opacity: 0;
+            }
+        }
+        &:valid {
+            & + label {
+                opacity: 0;
+            }
+        } 
     }
     label {
-        padding: $base-padding;
-        margin: $base-margin;
+        position: absolute;
+        left: 5%;
         font-weight: 600;
         font-size: $font-size;
-        color: $primary;
+        color: $blue;
+        opacity: 0.5;
         text-align: center;
     }
     button {
@@ -50,9 +61,9 @@ form {
             width: 100%;
             margin: $base-margin-sm;
         }
-        label {
-            margin: $base-margin-sm;
-        }
+        // label {
+        //     margin: $base-margin-sm;
+        // }
         button {
             margin: $base-margin-sm;
         }
