@@ -200,4 +200,20 @@ form button:hover {
     margin: 1rem auto;
   }
 }
+
+h2 {
+  font-family: 'DancingScript', cursive;
+  font-weight: medium;
+  font-size: 4rem;
+  letter-spacing: 1px;
+  color: #33313B;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 1450px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */

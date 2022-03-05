@@ -7,14 +7,12 @@ const path = require('path');
 const https = require('https');
 // require body-parser to catch requests from user
 const bodyParser = require('body-parser');
-
+// set the apps view enging to ejs (tell the app to use ejs as its view engine)
 let ejs = require('ejs');
 
 const app = express();
 // use EJS as a view enjine (for using templates)
 app.set('view engine', 'ejs');
-
-
 // require styles from public folder
 app.use(express.static(__dirname));
 // necessary code to be able to parsing through the body of the post request(from body-parser module)
@@ -38,17 +36,12 @@ app.post('/', function(req, res){
             const weatherData = JSON.parse(data);
             const temp = weatherData.main.temp;
             const weatherDescription = weatherData.weather[0].description;
-            const icon = weatherData.weather[0].icon;
-            var imageURL = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
-    
-            res.write('<h1>The temperature in ' + query + ' is ' + temp + ' degrees.</h1>');
-            res.write('<p>The weather is currently ' + weatherDescription + '.</p>');
-            res.write('<img src=' + imageURL + '>');
+            const weatherIcon = weatherData.weather[0].icon;
+            res.render('list', {cityName: query, temperature: temp, description: weatherDescription, icon: weatherIcon}) 
+
         })
     })
 })
-
-
 
 app.listen(3000, function() {
     console.log('Server is running on port 3000.')

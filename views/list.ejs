@@ -10,16 +10,15 @@
 <body> 
     <div class="wrapper">
         <div class="container">
-            <h1>What's the weather now?</h1>
-            <div class="form container">
-                <form id="inputForm" action="/" method="post">
-                    <input required id="cityInput" type="text" name="cityName">
-                    <label for="cityInput"><span>My City</span></label>
-                    <button type="submit">Check</button>
-                </form>
-            </div>
+            <h2>Currently in <%= cityName %></h2>
+            <h1>The temperature is <%= temperature %> degrees.</h1>
+            <p>The weather is currently <%= description %>.</p>
+            <p><%=icon%></p>
         </div>
     </div> 
     <script src="app.js"></script>
 </body>
 </html>
+
+
+

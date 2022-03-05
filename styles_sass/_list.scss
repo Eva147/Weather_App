@@ -1,0 +1,15 @@
+h2 {
+    font-family: 'DancingScript', cursive;
+    font-weight: medium;
+    font-size: $font-size-lg;
+    letter-spacing: 1px;
+    color: $primary;
+    margin: $base-margin;
+    text-align: center;
+}
+
+@media screen and (max-width:1450px){
+    h2 {
+        font-size: $font-size-md;
+    }
+}
