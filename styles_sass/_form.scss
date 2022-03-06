@@ -3,7 +3,7 @@ form {
     margin: $base-margin;
     padding: $base-padding;
     position: relative;
-    width: 100%;
+    width: 90%;
     input {
         padding: 2%;
         margin: $base-margin;
@@ -30,15 +30,16 @@ form {
     }
     label {
         position: absolute;
-        left: 5%;
-        font-weight: 600;
+        left: 12%;
+        top: 23%;
+        font-weight: 400;
         font-size: $font-size;
         color: $blue;
         opacity: 0.5;
         text-align: center;
     }
     button {
-        padding: 2%;
+        padding: 2% 8%;
         margin: $base-margin;
         background-color: $white;
         box-shadow: $base-box-shadow;
@@ -55,17 +56,24 @@ form {
 @media screen and (max-width:1450px){
     form {
         justify-content: space-between;
-        flex-direction: column;
         margin: $base-margin-sm;
         input {
             width: 100%;
             margin: $base-margin-sm;
         }
-        // label {
-        //     margin: $base-margin-sm;
-        // }
+        label {
+            left: 5%;
+            top: 20%;
+        }
         button {
             margin: $base-margin-sm;
         }
+    }
+}
+
+
+@media screen and (max-width:768px){
+    span {
+        left: 5%;
     }
 }

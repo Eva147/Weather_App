@@ -13,3 +13,10 @@ h1 {
         font-size: $font-size-md;
     }
 }
+
+
+@media screen and (max-width:768px){
+    h1 {
+        font-size: $font-size-x;
+    }
+}
