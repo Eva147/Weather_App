@@ -35,13 +35,42 @@ app.post('/', function(req, res){
             // JSON method convert hexadecimal data into javascript object
             const weatherData = JSON.parse(data);
             const temp = weatherData.main.temp;
+            const feels_like = weatherData.main.feels_like;
             const weatherDescription = weatherData.weather[0].description;
+
+            // convert a unix, UTC format for sunset and sunrise to usual time format for time zone
+            // timeZone shifts in seconds from UTC
+            const timeZone = weatherData.timezone;
+            // call function for converting unix, UTC to human readable format of time
+            const sunrise = timeConverter(weatherData.sys.sunrise, timeZone);
+            const sunset = timeConverter(weatherData.sys.sunset, timeZone);
+            
+            // render data to list
             const weatherIcon = weatherData.weather[0].icon;
-            res.render('list', {cityName: query, temperature: temp, description: weatherDescription, icon: weatherIcon}) 
+            res.render('list', {
+                cityName: query, 
+                temperature: temp, 
+                feels_like: feels_like, 
+                description: weatherDescription,
+                sunrise: sunrise,
+                sunset: sunset,
+                icon: weatherIcon
+            }) 
 
         })
     })
 })
+
+
+function timeConverter(time, offset) {
+    // add GMT time and offset for the zone (in sec), count it in millisecs
+    const timeMillisec = (time + offset) * 1000;
+    // get a date and time for this time
+    const dateObject = new Date(timeMillisec);
+    // take only time in hh:mm:ss
+    const humanDateFormat = dateObject.toLocaleString("en-US", {hour: "numeric",minute: "numeric"})
+    return humanDateFormat;
+}
 
 app.listen(3000, function() {
     console.log('Server is running on port 3000.')

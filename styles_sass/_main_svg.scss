@@ -1,8 +1,3 @@
-#svg_sun {
-    width: 15vw;
-    height: 15vw;
-}
-
 .svg_main {
     position: absolute;
     width: 5vw;
@@ -11,23 +6,14 @@
 }
 
 @media screen and (max-width:1450px){   
-    #svg_sun {
-        margin: $base-margin;
-        width: 25vw;
-        height: 25vw;
-    }
-    .main_svg {
+    .svg_main {
         width: 8vw;
         height: 8vw;
     }
 }
 @media screen and (max-width:768px){
-    #svg_sun {
-        width: 30vw;
-        height: 30vw;
-    }
-    .main_svg {
-        width: 8vw;
-        height: 8vw;
+    .svg_main {
+        width: 20vw;
+        height: 20vw;
     }
 }
