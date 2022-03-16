@@ -1,15 +1,96 @@
-h2 {
+.scaling_svg {
+    position: absolute; 
+    box-sizing: content-box;
+    height: 100%; 
+    width: 100%; 
+    left: 0; 
+    top: 0;
+    z-index: -100;
+}
+
+#content .return_button{
+    text-align: center;
+}
+#content h2 {
     font-family: 'DancingScript', cursive;
     font-weight: medium;
-    font-size: $font-size-lg;
+    font-size: $font-size-md;
     letter-spacing: 1px;
     color: $primary;
     margin: $base-margin;
+}
+
+#content p span {
+    font-family: 'DancingScript', cursive;
+    font-size: $font-size-xlg;
+    font-weight: 700;
+    
+}
+h3 {
+    font-size: $font-size-x;
+    color: $blue;
+    letter-spacing: 1px;
+    padding: $base-padding;
+    margin: $base-margin-sm;
+}
+
+p {
+    font-size: $font-size;
+    color: $blue;
+    letter-spacing: 1px;
+    padding: $base-padding;
+    margin: $base-margin-sm;
     text-align: center;
 }
 
-@media screen and (max-width:1450px){
-    h2 {
-        font-size: $font-size-md;
+button {
+    background-color: $white;
+    font-size: $font-size-md;
+    box-shadow: $base-box-shadow;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: $font-size;
+    color: $primary;
+    margin: $base-margin-sm;
+    padding: 3% 8%;
+}
+button:hover {
+    box-shadow: $base-box-shadow-hover;
+}
+
+@media screen and (min-width:1028px){
+    #small_tree_2, #small_tree_3 {
+        visibility: hidden;
+    }
+    #cloud_3, #cloud_4 {
+        visibility: hidden;
+    }
+
+}
+
+
+@media screen and (max-width:1028px){
+    #big_tree_1, #big_tree_2, #cloud_3, #cloud_4 {
+        visibility: hidden;
+    }
+    #content h2 {
+        font-size: $font-size-x;
+    }
+    #content p span {
+        font-size: $font-size-lg;
+        font-weight: 500;   
+    }
+
+}
+
+@media screen and (max-width:768px){
+    #small_tree, #cloud_1, #cloud_2 {
+        visibility: hidden;
+    }
+    #cloud_3, #cloud_4, #small_tree_2, #small_tree_3 {
+        visibility: visible;
+    }
+    p {
+        margin: $base-margin-xsm;
     }
 }

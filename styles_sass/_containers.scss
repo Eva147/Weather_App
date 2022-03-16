@@ -1,15 +1,20 @@
 .wrapper {
-    min-height: 100vh;
+    min-width: 100%;
+    min-height: 100%;
     overflow: hidden;
 }
 
 .container {
     @include display_flex(); 
-    margin: $base-margin;
+    margin: $base-margin-sm;
     padding: $base-padding;
     width: $base-width;
     flex-direction: column;
     width: 70%;
+}
+
+.background_container {
+    width: 100%;
 }
 
 @media screen and (max-width:1450px){

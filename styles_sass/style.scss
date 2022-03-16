@@ -4,6 +4,7 @@
 @import './variables'; 
 //base & layout
 @import './base';
+@import './breakpoints';
 //containers
 @import './containers';
 // title
@@ -12,5 +13,3 @@
 @import './form';
 //list
 @import './list';
-//svg
-@import './main_svg';
