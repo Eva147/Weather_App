@@ -1,3 +1,6 @@
+.type_of_weather {
+    visibility: visible;
+}
 .scaling_svg {
     position: absolute; 
     box-sizing: content-box;
@@ -18,6 +21,7 @@
     letter-spacing: 1px;
     color: $primary;
     margin: $base-margin;
+    text-align: center;
 }
 
 #content p span {
@@ -32,6 +36,7 @@ h3 {
     letter-spacing: 1px;
     padding: $base-padding;
     margin: $base-margin-sm;
+    text-align: center;
 }
 
 p {
@@ -58,39 +63,47 @@ button:hover {
     box-shadow: $base-box-shadow-hover;
 }
 
+// Big screen
 @media screen and (min-width:1028px){
-    #small_tree_2, #small_tree_3 {
-        visibility: hidden;
-    }
-    #cloud_3, #cloud_4 {
-        visibility: hidden;
-    }
+    // #small_tree_2,
+    //  #small_tree_3 {
+    //     visibility: visible;
+    // }
+    // #cloud_3, 
+    // #cloud_4 {
+    //     visibility: hidden;
+    // }
 
 }
 
-
+// Medium screen
 @media screen and (max-width:1028px){
-    #big_tree_1, #big_tree_2, #cloud_3, #cloud_4 {
-        visibility: hidden;
-    }
-    #content h2 {
-        font-size: $font-size-x;
-    }
-    #content p span {
-        font-size: $font-size-lg;
-        font-weight: 500;   
-    }
+    // #big_tree_1, #big_tree_2, #cloud_3, #cloud_4 {
+    //     visibility: hidden;
+    // }
+    // #content h2 {
+    //     font-size: $font-size-x;
+    //     margin: $base-margin-sm;
+    // }
+    // #content p span {
+    //     font-size: $font-size-lg;
+    //     font-weight: 500;   
+    // }
 
 }
 
+// Small screen
 @media screen and (max-width:768px){
-    #small_tree, #cloud_1, #cloud_2 {
-        visibility: hidden;
-    }
-    #cloud_3, #cloud_4, #small_tree_2, #small_tree_3 {
-        visibility: visible;
-    }
-    p {
-        margin: $base-margin-xsm;
-    }
+    // #small_tree, #cloud_1, #cloud_2 {
+    //     visibility: hidden;
+    // }
+    // #cloud_3, #cloud_4, #small_tree_2, #small_tree_3 {
+    //     visibility: visible;
+    // }
+    // h3 {
+    //     font-size: $font-size;
+    // }
+    // p {
+    //     margin: $base-margin-xsm;
+    // }
 }
