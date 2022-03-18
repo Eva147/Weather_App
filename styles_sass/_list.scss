@@ -1,6 +1,7 @@
-.type_of_weather {
-    visibility: visible;
+.night_background {
+   @include night_colours;
 }
+
 .scaling_svg {
     position: absolute; 
     box-sizing: content-box;
@@ -24,11 +25,14 @@
     text-align: center;
 }
 
-#content p span {
+h3 span {
     font-family: 'DancingScript', cursive;
     font-size: $font-size-xlg;
-    font-weight: 700;
-    
+    font-weight: 700;  
+}
+// sign °c after temperature
+h3 span:after {
+    content: ' \00B0 c';
 }
 h3 {
     font-size: $font-size-x;
@@ -65,45 +69,40 @@ button:hover {
 
 // Big screen
 @media screen and (min-width:1028px){
-    // #small_tree_2,
-    //  #small_tree_3 {
-    //     visibility: visible;
-    // }
-    // #cloud_3, 
-    // #cloud_4 {
-    //     visibility: hidden;
-    // }
+     #small_tree, #cloud_4, #cloud_5, #light_small_2 {
+        visibility: hidden;
+    }
 
 }
 
 // Medium screen
 @media screen and (max-width:1028px){
-    // #big_tree_1, #big_tree_2, #cloud_3, #cloud_4 {
-    //     visibility: hidden;
-    // }
-    // #content h2 {
-    //     font-size: $font-size-x;
-    //     margin: $base-margin-sm;
-    // }
-    // #content p span {
-    //     font-size: $font-size-lg;
-    //     font-weight: 500;   
-    // }
+    #content h2 {
+        font-size: $font-size-x;
+        margin: $base-margin-sm;
+    }
+    h3 span {
+        font-size: $font-size-lg;
+        font-weight: 500;   
+    }
+    h3 {
+        font-size: $font-size;
+    }
+    #cloud_1, #cloud_2, .right_element, #big_tree, #light_1, #light_2{
+        visibility: hidden;
+    }
+    #small_tree, #cloud_4, #cloud_5, #light_small_2 {
+        visibility: visible;
+    }
 
 }
 
 // Small screen
 @media screen and (max-width:768px){
-    // #small_tree, #cloud_1, #cloud_2 {
-    //     visibility: hidden;
-    // }
-    // #cloud_3, #cloud_4, #small_tree_2, #small_tree_3 {
-    //     visibility: visible;
-    // }
-    // h3 {
-    //     font-size: $font-size;
-    // }
-    // p {
-    //     margin: $base-margin-xsm;
-    // }
+    h3 {
+        font-size: $font-size;
+    }
+    p {
+        margin: $base-margin-xsm;
+    }
 }

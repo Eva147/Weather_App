@@ -4,6 +4,10 @@ $secondary: #FBE0C4;
 $blue: #4592AF;
 $white: #F6F5F5;
 
+// backgrounds
+$base-background-image: linear-gradient(-225deg, #4592AF 0%, #FFF 100%);
+$base-night-background-image: linear-gradient(to top, #33313B 0%, #4592AF 100%);
+
 // base parameters for containers
 $base-margin: 2rem auto;
 $base-margin-sm: 1rem auto;
@@ -16,6 +20,8 @@ $base-height: 100%;
 // box-shadow
 $base-box-shadow: 0 0 10px 3px $blue;
 $base-box-shadow-hover: 0 0 15px 3px $blue;
+$base-box-shadow-night: 0 0 10px 3px $secondary;
+$base-box-shadow-hover-night: 0 0 15px 3px $secondary;
 
 // font-sizes
 $font-size: 1rem;
@@ -26,10 +32,30 @@ $font-size-xlg: 6rem;
 
 
 // mixin for display
-@mixin display_flex() {
+@mixin display_flex {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+}
+
+// mixin for night colors
+@mixin night_colours {
+    background-image: $base-night-background-image;
+    h3 {
+        color: $primary;
+    } 
+    p {
+        color: $secondary;
+        opacity: 70%;
+    }
+    button {
+        background-color: $secondary;
+        opacity: 70%;
+        box-shadow: $base-box-shadow-night;
+    }
+    button:hover {
+        box-shadow: $base-box-shadow-hover-night;
+    }
 }
 

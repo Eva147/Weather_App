@@ -9,6 +9,7 @@ const https = require('https');
 const bodyParser = require('body-parser');
 // set the apps view enging to ejs (tell the app to use ejs as its view engine)
 let ejs = require('ejs');
+const { breadcrumbsClasses } = require('@mui/material');
 
 const app = express();
 // use EJS as a view enjine (for using templates)
@@ -37,7 +38,6 @@ app.post('/', function(req, res){
             const temp = Math.floor(weatherData.main.temp);
             const feels_like = Math.floor(weatherData.main.feels_like);
             const weatherDescription = weatherData.weather[0].description;
-            const weatherIcon = weatherData.weather[0].icon;
 
             // convert a unix, UTC format for sunset and sunrise to usual time format for time zone
             // time zone shifts in seconds from UTC
@@ -45,6 +45,43 @@ app.post('/', function(req, res){
             // call function for converting unix, UTC to human readable format of time
             const sunrise = timeConverter(weatherData.sys.sunrise, timeZone);
             const sunset = timeConverter(weatherData.sys.sunset, timeZone);
+
+            // assignment different types of svg depending on received weather icon
+            const weatherIcon = weatherData.weather[0].icon;
+            let weatherBackground;
+            if (weatherIcon.includes("n")) {
+                weatherBackground = "#night";
+            } else {
+                switch (weatherIcon) {
+                    case "01d":
+                        weatherBackground = "#sunny";
+                        break;
+                    case "02d":
+                        weatherBackground = "#cloudy";
+                        break;
+                    case "03d":
+                        weatherBackground = "#cloudy";
+                        break;
+                    case "04d":
+                        weatherBackground = "#cloudy";
+                        break;
+                    case "09d":
+                        weatherBackground = "#rainy";
+                        break;
+                    case "10d":
+                        weatherBackground = "#rainy";
+                        break;
+                    case "11d":
+                        weatherBackground = "#thunderstorm";
+                        break;
+                    case "13d":
+                        weatherBackground = "#snowy";
+                        break;
+                    case "50d":
+                        weatherBackground = "#mist";
+                        break;
+                };
+            };
 
             // render data to list
             res.render('list', {
@@ -54,12 +91,13 @@ app.post('/', function(req, res){
                 description: weatherDescription,
                 sunrise: sunrise,
                 sunset: sunset,
-                icon: weatherIcon
+                background_svg: weatherBackground
             }) 
 
         })
     })
 })
+
 
 
 function timeConverter(time, offset) {

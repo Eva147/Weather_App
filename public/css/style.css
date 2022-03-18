@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
   height: 100%;
   font-family: Lato;
-  background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+  background-image: linear-gradient(-225deg, #4592AF 0%, #FFF 100%);
   overflow: hidden;
 }
 
@@ -232,8 +232,30 @@ form button:hover {
   }
 }
 
-.type_of_weather {
-  visibility: visible;
+.night_background {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#33313B), to(#4592AF));
+  background-image: linear-gradient(to top, #33313B 0%, #4592AF 100%);
+}
+
+.night_background h3 {
+  color: #33313B;
+}
+
+.night_background p {
+  color: #FBE0C4;
+  opacity: 70%;
+}
+
+.night_background button {
+  background-color: #FBE0C4;
+  opacity: 70%;
+  -webkit-box-shadow: 0 0 10px 3px #FBE0C4;
+          box-shadow: 0 0 10px 3px #FBE0C4;
+}
+
+.night_background button:hover {
+  -webkit-box-shadow: 0 0 15px 3px #FBE0C4;
+          box-shadow: 0 0 15px 3px #FBE0C4;
 }
 
 .scaling_svg {
@@ -261,10 +283,14 @@ form button:hover {
   text-align: center;
 }
 
-#content p span {
+h3 span {
   font-family: 'DancingScript', cursive;
   font-size: 6rem;
   font-weight: 700;
+}
+
+h3 span:after {
+  content: ' \00B0 c';
 }
 
 h3 {
@@ -301,5 +327,40 @@ button {
 button:hover {
   -webkit-box-shadow: 0 0 15px 3px #4592AF;
           box-shadow: 0 0 15px 3px #4592AF;
+}
+
+@media screen and (min-width: 1028px) {
+  #small_tree, #cloud_4, #cloud_5, #light_small_2 {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 1028px) {
+  #content h2 {
+    font-size: 2rem;
+    margin: 1rem auto;
+  }
+  h3 span {
+    font-size: 4rem;
+    font-weight: 500;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  #cloud_1, #cloud_2, .right_element, #big_tree, #light_1, #light_2 {
+    visibility: hidden;
+  }
+  #small_tree, #cloud_4, #cloud_5, #light_small_2 {
+    visibility: visible;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h3 {
+    font-size: 1rem;
+  }
+  p {
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */
