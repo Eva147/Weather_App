@@ -16,7 +16,7 @@ const app = express();
 app.set('view engine', 'ejs');
 // require styles from public folder
 app.use(express.static(__dirname));
-// necessary code to be able to parsing through the body of the post request(from body-parser module)
+// necessary code to be able to parsing through the body of the post request (from body-parser module)
 app.use(bodyParser.urlencoded({extended: true}));
 
 // get request for the home page
@@ -78,7 +78,7 @@ app.post('/', function(req, res){
                         weatherBackground = "#snowy";
                         break;
                     case "50d":
-                        weatherBackground = "#mist";
+                        weatherBackground = "#misty";
                         break;
                 };
             };
