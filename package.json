@@ -13,6 +13,7 @@
     "node": "16.x"
   },
   "dependencies": {
+    "@emotion/styled": "^11.10.0",
     "@mui/material": "^5.10.2",
     "body-parser": "^1.19.2",
     "dotenv": "^16.0.0",
