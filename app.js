@@ -35,6 +35,7 @@ app.post('/', function(req, res){
         response.on('data', function(data){
             // JSON method convert hexadecimal data into javascript object
             const weatherData = JSON.parse(data);
+            console.log(weatherData)
             const temp = Math.floor(weatherData.main.temp);
             const feels_like = Math.floor(weatherData.main.feels_like);
             const weatherDescription = weatherData.weather[0].description;
@@ -110,8 +111,12 @@ function timeConverter(time, offset) {
     return humanDateFormat;
 }
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+app.listen(port);
 
-
-app.listen(3000, function() {
+app.listen(port, function() {
     console.log('Server is running on port 3000.')
 })
