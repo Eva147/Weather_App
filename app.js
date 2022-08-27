@@ -35,7 +35,11 @@ app.post('/', function(req, res){
         response.on('data', function(data){
             // JSON method convert hexadecimal data into javascript object
             const weatherData = JSON.parse(data);
-            console.log(weatherData)
+            if(weatherData.cod === '404') {
+                res.render('error', {
+                    cityName: query
+                })
+            } else {
             const temp = Math.floor(weatherData.main.temp);
             const feels_like = Math.floor(weatherData.main.feels_like);
             const weatherDescription = weatherData.weather[0].description;
@@ -94,6 +98,7 @@ app.post('/', function(req, res){
                 sunset: sunset,
                 background_svg: weatherBackground
             }) 
+        }
 
         })
     })
@@ -113,7 +118,7 @@ function timeConverter(time, offset) {
 
 let port = process.env.PORT;
 if (port == null || port == "") {
-  port = 5000;
+  port = 3000;
 }
 app.listen(port, function() {
     console.log(`Server is running on port ${port}.`)

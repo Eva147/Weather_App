@@ -1,3 +1,9 @@
+<!-- to run locally - nodemon app.js -->
+<!-- to deploy to heroku --->
+<!-- git add .  -->
+<!-- git commit ... -->
+<!-- git push heroku-staging main -->
+
 # Weather_App
 
 Description.

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Lato:ital,wght@0,400;1,300;1,400&display=swap");
 * {
   padding: 0;
@@ -48,7 +49,9 @@ button::-moz-focus-inner {
 }
 
 a, a:visited {
-  text-decoration: none;
+  text-decoration: underline;
+  color: inherit;
+  text-underline-offset: 3px;
 }
 
 a:hover {
@@ -110,15 +113,13 @@ body {
     width: 80%;
   }
 }
-
 @media screen and (max-width: 768px) {
   .container {
     width: 90%;
   }
 }
-
 h1 {
-  font-family: 'DancingScript', cursive;
+  font-family: "DancingScript", cursive;
   font-weight: medium;
   font-size: 4rem;
   letter-spacing: 1px;
@@ -132,13 +133,11 @@ h1 {
     font-size: 3rem;
   }
 }
-
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 2rem;
   }
 }
-
 form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -157,7 +156,6 @@ form {
   position: relative;
   width: 90%;
 }
-
 form input {
   padding: 2%;
   margin: 2rem auto;
@@ -170,20 +168,16 @@ form input {
   font-size: 1rem;
   color: #33313B;
 }
-
 form input:hover {
   -webkit-box-shadow: 0 0 15px 3px #4592AF;
           box-shadow: 0 0 15px 3px #4592AF;
 }
-
 form input:focus + label {
   opacity: 0;
 }
-
 form input:valid + label {
   opacity: 0;
 }
-
 form label {
   position: absolute;
   left: 12%;
@@ -194,7 +188,6 @@ form label {
   opacity: 0.5;
   text-align: center;
 }
-
 form button {
   padding: 2% 8%;
   margin: 2rem auto;
@@ -206,7 +199,6 @@ form button {
   font-size: 1rem;
   color: #33313B;
 }
-
 form button:hover {
   -webkit-box-shadow: 0 0 15px 3px #4592AF;
           box-shadow: 0 0 15px 3px #4592AF;
@@ -231,28 +223,23 @@ form button:hover {
     margin: 1rem auto;
   }
 }
-
 .night_background {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#33313B), to(#4592AF));
   background-image: linear-gradient(to top, #33313B 0%, #4592AF 100%);
 }
-
 .night_background h3 {
   color: #33313B;
 }
-
 .night_background p {
   color: #FBE0C4;
   opacity: 70%;
 }
-
 .night_background button {
   background-color: #FBE0C4;
   opacity: 70%;
   -webkit-box-shadow: 0 0 10px 3px #FBE0C4;
           box-shadow: 0 0 10px 3px #FBE0C4;
 }
-
 .night_background button:hover {
   -webkit-box-shadow: 0 0 15px 3px #FBE0C4;
           box-shadow: 0 0 15px 3px #FBE0C4;
@@ -274,7 +261,7 @@ form button:hover {
 }
 
 #content h2 {
-  font-family: 'DancingScript', cursive;
+  font-family: "DancingScript", cursive;
   font-weight: medium;
   font-size: 3rem;
   letter-spacing: 1px;
@@ -284,13 +271,13 @@ form button:hover {
 }
 
 h3 span {
-  font-family: 'DancingScript', cursive;
+  font-family: "DancingScript", cursive;
   font-size: 6rem;
   font-weight: 700;
 }
 
 h3 span:after {
-  content: ' \00B0 c';
+  content: " °c";
 }
 
 h3 {
@@ -334,7 +321,6 @@ button:hover {
     visibility: hidden;
   }
 }
-
 @media screen and (max-width: 1028px) {
   #content h2 {
     font-size: 2rem;
@@ -354,7 +340,6 @@ button:hover {
     visibility: visible;
   }
 }
-
 @media screen and (max-width: 768px) {
   h3 {
     font-size: 1rem;
@@ -362,5 +347,4 @@ button:hover {
   p {
     margin: 0 auto;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
