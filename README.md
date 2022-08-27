@@ -4,6 +4,10 @@ Description.
 
 The weather app with a nice and responsive layout. With it you can check the weather and sunrise/sunset time in a specified town.
 
+You can see the publish project here:
+https://eugenie-weather-app.herokuapp.com
+
+
 Idea.
 
 This is one of my first pet projects. The idea was to create a weather app using API from OpenWeather.co.uk.
