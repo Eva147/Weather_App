@@ -12,15 +12,18 @@
     z-index: -100;
 }
 
-#content .return_button{
+.content .return_button{
     text-align: center;
 }
-#content h2 {
+.content {
+    color: $primary;
+}
+
+.content h2 {
     font-family: 'DancingScript', cursive;
     font-weight: medium;
     font-size: $font-size-md;
     letter-spacing: 1px;
-    color: $primary;
     margin: $base-margin;
     text-align: center;
 }
@@ -36,7 +39,6 @@ h3 span:after {
 }
 h3 {
     font-size: $font-size-x;
-    color: $blue;
     letter-spacing: 1px;
     padding: $base-padding;
     margin: $base-margin-sm;
@@ -45,7 +47,6 @@ h3 {
 
 p {
     font-size: $font-size;
-    color: $blue;
     letter-spacing: 1px;
     padding: $base-padding;
     margin: $base-margin-sm;
@@ -77,16 +78,13 @@ button:hover {
 
 // Medium screen
 @media screen and (max-width:1028px){
-    #content h2 {
+    .content h2 {
         font-size: $font-size-x;
         margin: $base-margin-sm;
     }
     h3 span {
         font-size: $font-size-lg;
         font-weight: 500;   
-    }
-    h3 {
-        font-size: $font-size;
     }
     #cloud_1, #cloud_2, .right_element, #big_tree, #light_1, #light_2{
         visibility: hidden;
@@ -102,7 +100,7 @@ button:hover {
     h3 {
         font-size: $font-size;
     }
-    p {
+    p, {
         margin: $base-margin-xsm;
     }
 }

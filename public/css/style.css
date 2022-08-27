@@ -121,7 +121,7 @@ body {
 h1 {
   font-family: "DancingScript", cursive;
   font-weight: medium;
-  font-size: 4rem;
+  font-size: 5rem;
   letter-spacing: 1px;
   color: #33313B;
   margin: 2rem auto;
@@ -130,7 +130,7 @@ h1 {
 
 @media screen and (max-width: 1450px) {
   h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -174,9 +174,11 @@ form input:hover {
 }
 form input:focus + label {
   opacity: 0;
+  display: none;
 }
 form input:valid + label {
   opacity: 0;
+  display: none;
 }
 form label {
   position: absolute;
@@ -256,23 +258,26 @@ form button:hover {
   z-index: -100;
 }
 
-#content .return_button {
+.content .return_button {
   text-align: center;
 }
 
-#content h2 {
+.content {
+  color: #33313B;
+}
+
+.content h2 {
   font-family: "DancingScript", cursive;
   font-weight: medium;
-  font-size: 3rem;
+  font-size: 4rem;
   letter-spacing: 1px;
-  color: #33313B;
   margin: 2rem auto;
   text-align: center;
 }
 
 h3 span {
   font-family: "DancingScript", cursive;
-  font-size: 6rem;
+  font-size: 7rem;
   font-weight: 700;
 }
 
@@ -282,7 +287,6 @@ h3 span:after {
 
 h3 {
   font-size: 2rem;
-  color: #4592AF;
   letter-spacing: 1px;
   padding: 1%;
   margin: 1rem auto;
@@ -291,7 +295,6 @@ h3 {
 
 p {
   font-size: 1rem;
-  color: #4592AF;
   letter-spacing: 1px;
   padding: 1%;
   margin: 1rem auto;
@@ -300,7 +303,7 @@ p {
 
 button {
   background-color: #F6F5F5;
-  font-size: 3rem;
+  font-size: 4rem;
   -webkit-box-shadow: 0 0 10px 3px #4592AF;
           box-shadow: 0 0 10px 3px #4592AF;
   border-radius: 20px;
@@ -322,16 +325,13 @@ button:hover {
   }
 }
 @media screen and (max-width: 1028px) {
-  #content h2 {
+  .content h2 {
     font-size: 2rem;
     margin: 1rem auto;
   }
   h3 span {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 500;
-  }
-  h3 {
-    font-size: 1rem;
   }
   #cloud_1, #cloud_2, .right_element, #big_tree, #light_1, #light_2 {
     visibility: hidden;
