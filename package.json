@@ -1,23 +1,25 @@
 {
   "name": "weather_app",
   "version": "1.0.0",
-  "description": "",
+  "description": "<!-- to run locally - nodemon app.js --> <!-- deploy to heroku ---> <!-- git add .  --> <!-- git commit ... --> <!-- git push heroku-staging main -->",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eva147/Weather_App.git"
   },
   "author": "Eugenie Svintsova",
   "license": "ISC",
-  "engines": {
-    "node": "16.x"
+  "bugs": {
+    "url": ""
   },
+  "homepage": "",
   "dependencies": {
-    "@emotion/styled": "^11.10.0",
-    "@mui/material": "^5.10.2",
-    "body-parser": "^1.19.2",
-    "dotenv": "^16.0.0",
-    "ejs": "^3.1.6",
-    "express": "^4.17.3"
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
   }
 }

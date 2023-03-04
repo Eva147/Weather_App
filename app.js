@@ -1,6 +1,6 @@
 //Storing configuration in the environment separate from code
 require('dotenv').config();
-// require experess module for npm
+// require express module for npm
 const express = require('express');
 const path = require('path');
 // require https module for npm to get data from remoted server
@@ -9,8 +9,6 @@ const https = require('https');
 const bodyParser = require('body-parser');
 // set the apps view enging to ejs (tell the app to use ejs as its view engine)
 let ejs = require('ejs');
-const { breadcrumbsClasses } = require('@mui/material');
-
 const app = express();
 // use EJS as a view enjine (for using templates)
 app.set('view engine', 'ejs');
@@ -28,7 +26,7 @@ app.get('/', function(req, res) {
 app.post('/', function(req, res){
     let UserInput = req.body.cityName;
     const query =  UserInput.charAt(0).toUpperCase() + UserInput.slice(1).toLowerCase();
-    const appId = '943afe627dbbdaf7e3c11a6d37138e44';
+    const appId = process.env.API_KEY;
     const unit = 'metric';
     const url = 'https://api.openweathermap.org/data/2.5/weather?q=' + query + '&appid=' + appId + '&units=' + unit;
     https.get(url, function(response){
@@ -86,19 +84,19 @@ app.post('/', function(req, res){
                         case "50d":
                             weatherBackground = "#misty";
                             break;
-                    };
-                };
+                    }
+                }
 
                 // render data to list
                 res.render('list', {
-                    cityName: query, 
-                    temperature: temp, 
-                    feels_like: feels_like, 
+                    cityName: query,
+                    temperature: temp,
+                    feels_like: feels_like,
                     description: weatherDescription,
                     sunrise: sunrise,
                     sunset: sunset,
                     background_svg: weatherBackground
-                }) 
+                })
             }
         })
     })

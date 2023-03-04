@@ -1,5 +1,5 @@
 <!-- to run locally - nodemon app.js -->
-<!-- to deploy to heroku --->
+<!-- deploy to heroku --->
 <!-- git add .  -->
 <!-- git commit ... -->
 <!-- git push heroku-staging main -->
@@ -13,12 +13,12 @@ The weather app with a nice and responsive layout. With it you can check the wea
 Idea.
 
 This is one of my first pet projects. The idea was to create a weather app using API from OpenWeather.co.uk.
-In addition, I wanted to implement different backgrounds depending on the time of day and the type of weather. 
+In addition, I wanted to implement different backgrounds depending on the time of day and the type of weather.
 Plus, I wanted to make it using preprocessor SASS (SCSS) and EJS templates. For parsing data, I used the npm package body-parser.
 
 Implementation.
 
-The most challenging part was figuring out how to implement different backgrounds using a specific parameter coming through the API. Also, I learned how to put the backgrounds on the page. 
+The most challenging part was figuring out how to implement different backgrounds using a specific parameter coming through the API. Also, I learned how to put the backgrounds on the page.
 That's how I did it:
 I used undraw.com to find individual parts and elements for my backgrounds and then customised and constructed them on Figma.
 Then I put them all together and implemented in the code.
