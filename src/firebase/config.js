@@ -1,12 +1,12 @@
 import { initializeApp } from 'firebase/app'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAHW-XcAHsWJuMXvo00UfN0Ql_HmXJzl08",
-    authDomain: "weather-app-eugenie.firebaseapp.com",
-    projectId: "weather-app-eugenie",
-    storageBucket: "weather-app-eugenie.appspot.com",
-    messagingSenderId: "231340488113",
-    appId: "1:231340488113:web:b3c6e65b6979840865f990"
+    apiKey: "AIzaSyA2dt87QBucz4FgpFUFyctvLEFIxXx4drA",
+    authDomain: "weather-app-11ff8.firebaseapp.com",
+    projectId: "weather-app-11ff8",
+    storageBucket: "weather-app-11ff8.appspot.com",
+    messagingSenderId: "28291898893",
+    appId: "1:28291898893:web:1a0f307cc674c525c8ff44"
 };
 
 initializeApp(firebaseConfig);
